@@ -1,250 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multicric Affiliate Program</title>
-
-  <!-- SEO Meta Description -->
-  <meta name="description" content="Join the Multicric Affiliate Program and earn commissions by referring players. Get real-time tracking, fast payouts, and revenue share up to 25%+.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join Our Partner Program</title>
+  <meta name="description" content="We work with global digital brands & invite new partners to collaborate. Apply now to be part of our exclusive program." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0a0a0a;
-      color: #fff;
+    :root{
+      --brand:#6c00ff;
+      --bg:#1a1a1a;
+      --card:#121212;
+      --text:#eaeaea;
+      --muted:#b8b8b8;
+      --ring:rgba(108,0,255,.45);
     }
-
-    /* Header */
-    header {
-      background: #1a1a1a;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 80% -10%, rgba(108,0,255,.25), transparent 60%),
+        radial-gradient(1000px 600px at -10% 110%, rgba(108,0,255,.18), transparent 60%),
+        var(--bg);
+      display:grid;
+      place-items:center;
+      padding:24px;
     }
-
-    header img {
-      height: 60px;
+    .card{
+      width:100%;
+      max-width:720px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), transparent 30%) , var(--card);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06) inset;
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+      text-align:center;
     }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s;
+    .logo{
+      width:120px;
+      height:auto;
+      margin:0 auto 16px;
+      display:block;
     }
-
-    nav a:hover {
-      color: #ffcc00;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.3px;
+      background:rgba(108,0,255,.12);
+      border:1px solid rgba(108,0,255,.35);
+      color:#e9ddff;
     }
-
-    /* Hero Section */
-    .hero {
-      background: #0a0a0a;
-      padding: 80px 20px;
+    .title{
+      font-size:clamp(28px, 4vw, 44px);
+      line-height:1.05;
+      margin:16px 0 10px;
+      font-weight:800;
+      letter-spacing:-.02em;
     }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
+    .subtitle{
+      font-size:clamp(14px, 2.2vw, 18px);
+      color:var(--muted);
+      line-height:1.6;
+      margin:0 0 22px;
     }
-
-    .hero-image img {
-      max-width: 400px;
-      border-radius: 15px;
+    .cta-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
     }
-
-    .hero-text {
-      flex: 1;
-      color: #fff;
-      text-align: left;
+    .btn-primary{
+      --padY:14px; --padX:20px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:var(--padY) var(--padX);
+      border-radius:16px;
+      background:linear-gradient(135deg, var(--brand), #9340ff);
+      color:white;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+      box-shadow:0 10px 24px rgba(108,0,255,.35);
+      letter-spacing:.2px;
     }
-
-    .hero-text h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #ffcc00;
+    .btn-primary:focus{outline:none; box-shadow:0 0 0 4px var(--ring)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .divider{
+      height:1px; width:100%;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+      margin:20px 0 8px;
     }
-
-    .hero-text p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      line-height: 1.6;
+    .popover{position:relative; display:inline-block;}
+    .menu{
+      position:absolute;
+      top:calc(100% + 10px);
+      left:50%;
+      transform:translateX(-50%);
+      min-width:260px;
+      background:#0e0e0e;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      padding:8px;
+      box-shadow:0 14px 44px rgba(0,0,0,.55);
+      display:none;
+      z-index:20;
+      text-align:left;
     }
-
-    .cta-btn {
-      background: #25d366;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
+    .menu.open{display:block}
+    .menu a{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px 12px;
+      border-radius:12px;
+      color:var(--text);
+      text-decoration:none;
+      transition:background .12s ease, transform .12s ease;
     }
-
-    .cta-btn:hover {
-      background: #128c7e;
+    .menu a:hover{background:rgba(255,255,255,.06); transform:translateY(-1px)}
+    .menu small{color:var(--muted); font-size:12px}
+    .note{
+      font-size:12px; color:var(--muted);
+      margin-top:16px;
     }
-
-    /* Sections */
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+    .ic{
+      width:28px; height:28px; border-radius:999px;
+      display:grid; place-items:center;
+      background:rgba(255,255,255,.06);
+      font-size:14px;
     }
-
-    .section h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 40px;
-      color: #ffcc00;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .feature-box {
-      background: #1a1a1a;
-      flex: 1 1 300px;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .feature-box:hover {
-      transform: scale(1.05);
-    }
-
-    .feature-box h3 {
-      margin-bottom: 15px;
-      color: #ffcc00;
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text {
-        text-align: center;
-      }
-
-      .hero-image img {
-        max-width: 100%;
-      }
+    @media (max-width:420px){
+      .btn-primary{width:100%; justify-content:center}
+      .popover{width:100%}
+      .menu{min-width:100%}
     }
   </style>
 </head>
 <body>
+  <main class="card" role="main" aria-labelledby="title">
+    <!-- Logo -->
+    <img src="assets/logo.png" alt="Company Logo" class="logo">
 
-  <!-- Header with Logo -->
-  <header>
-    <img src="assets/logo.png" alt="Multicric Logo">
-    <nav>
-      <a href="#overview">Overview</a>
-      <a href="#commission">Commission</a>
-      <a href="#partner">Partner Program</a>
-      <a href="#join">Join Now</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section with Background Image -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-image">
-        <img src="background.png" alt="Affiliate Image">
-      </div>
-      <div class="hero-text">
-        <h1>Join Multicric Affiliate Program</h1>
-        <p>
-          Let’s have a clear understanding of what the Multicric Affiliate Program is before exploring the services it offers. Please take a closer look at how the program operates and its various functions to gain a better understanding. That will enable you to learn more about the program and not miss any important detail.
-          <br><br>
-          Multicric is a leading online sports and entertainment platform that operates in the digital entertainment industry. With thousands of users in India, Multicric is a popular platform that has gained a nationwide following. The vast number of users and growing interest in our services make Multicric the right choice for affiliates looking to earn commissions through our program.
-        </p>
-        <a href="https://wa.me/+447999529371" class="cta-btn">Join via WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Program Overview -->
-  <section id="overview" class="section">
-    <h2>Program Overview</h2>
-    <div class="features">
-      <div class="feature-box">
-        <h3>Real-Time Tracking</h3>
-        <p>Monitor all your referrals and earnings instantly with our real-time dashboard.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Fast Payouts</h3>
-        <p>Receive your commissions quickly and reliably through multiple payment methods.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Unlimited Earning</h3>
-        <p>Refer as many players as you want and maximize your revenue share without limits.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Commission Structure -->
-  <section id="commission" class="section">
-    <h2>Commission Structure</h2>
-    <div class="features">
-      <div class="feature-box">
-        <h3>Starting Tier</h3>
-        <p>Start with 10% revenue share per referred player.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Growth Tier</h3>
-        <p>Achieve higher tiers based on your monthly performance and earn up to 25%+</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Partner Program Section -->
-  <section id="partner" class="section" style="text-align:center;">
-    <h2>Join Our Partner Program</h2>
-    <p style="max-width:700px; margin:0 auto 30px; font-size:18px; line-height:1.6;">
-      We work with global digital brands & invite new partners to collaborate. 
+    <span class="badge" aria-label="Exclusive program badge">Exclusive • Limited Spots</span>
+    <h1 id="title" class="title">Join Our Partner Program</h1>
+    <p class="subtitle">
+      We work with global digital brands & invite new partners to collaborate.
       Apply now to be part of our exclusive program.
     </p>
-    <a href="https://wa.me/+447999529371" class="cta-btn">Apply Now</a>
-    <!-- Yahan aap Telegram ya Google Form link bhi use kar sakte ho -->
-  </section>
 
-  <!-- Join CTA -->
-  <section id="join" class="section" style="text-align:center;">
-    <h2>Ready to Earn?</h2>
-    <a href="https://wa.me/+447999529371" class="cta-btn">Join Multicric Affiliate via WhatsApp</a>
-  </section>
+    <div class="cta-wrap">
+      <div class="popover">
+        <button id="applyNowBtn" class="btn-primary" aria-haspopup="true" aria-expanded="false">
+          <span>Apply Now</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Multicric. All rights reserved.
-  </footer>
+        <nav id="applyMenu" class="menu" aria-label="Apply options">
+          <a href="https://wa.me/+447999529371" target="_blank" rel="noopener">
+            <span class="ic">💬</span>
+            <span>
+              <strong>WhatsApp</strong><br>
+              <small>Chat & submit details</small>
+            </span>
+          </a>
+          <a href="https://t.me/yourTelegramUsername" target="_blank" rel="noopener">
+            <span class="ic">📨</span>
+            <span>
+              <strong>Telegram</strong><br>
+              <small>Connect instantly</small>
+            </span>
+          </a>
+          <a href="https://forms.gle/your-google-form-id" target="_blank" rel="noopener">
+            <span class="ic">📝</span>
+            <span>
+              <strong>Google Form</strong><br>
+              <small>Fill application online</small>
+            </span>
+          </a>
+        </nav>
+      </div>
+    </div>
 
+    <div class="divider"></div>
+    <p class="note">Get Your Affiliate Link Now.</p>
+  </main>
+
+  <script>
+    const btn = document.getElementById('applyNowBtn');
+    const menu = document.getElementById('applyMenu');
+
+    function toggleMenu(open) {
+      const isOpen = open ?? !menu.classList.contains('open');
+      menu.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+  </script>
 </body>
 </html>
